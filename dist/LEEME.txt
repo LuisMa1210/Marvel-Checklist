@@ -1,0 +1,11 @@
+MARVEL WATCHLIST - VERSIÓN DESCARGABLE
+
+1. Descomprime este archivo ZIP.
+2. Abre index.html en tu navegador.
+3. Marca las películas y series que hayas visto. El progreso se guarda en ese navegador.
+4. Usa «Exportar progreso» para crear una copia y «Importar progreso» para llevarla a otro dispositivo.
+5. El apartado verde «Camino a Doomsday» sigue la selección oficial publicada en https://www.disneyplus.com/explore/articles/countdown-to-avengers-doomsday y comparte los checks con la lista principal.
+6. El contador muestra los días de calendario que faltan para el 18 de diciembre de 2026 según la fecha local de tu dispositivo.
+
+Las viñetas y portadas incluidas fueron publicadas por Marvel. Sus créditos y enlaces de origen aparecen en la aplicación. Las imágenes de Doctor Doom de la película provienen de https://movies.disney.com/avengers-doomsday.
+Imágenes © Marvel. Aplicación personal no oficial.

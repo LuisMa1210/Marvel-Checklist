@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e62429">
+  <meta name="description" content="Tu checklist de Marvel, X-Men, Spider-Man y Los 4 Fantásticos, con estilo de cómic y progreso guardado.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Marvel Watchlist · Tu misión</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./data.js" defer></script>
+  <script src="./doomsday-data.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Marvel Watchlist, inicio"><span class="brand-mark" aria-hidden="true">M<span class="brand-star">★</span></span><span>MARVEL <em>WATCHLIST</em></span></a>
+      <div class="top-actions"><a class="doom-nav" href="#doomsday">☢ Camino a Doomsday</a><button class="install-button" id="install-button" type="button"><span aria-hidden="true">↓</span> Instalar app</button></div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-dots" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-star" aria-hidden="true">★</span> TU MISIÓN COMIENZA AQUÍ</div>
+          <h1 id="hero-title">UN UNIVERSO.<br><span>UNA LISTA.</span></h1>
+          <p>Películas y series de Marvel, X-Men, Spider-Man y Los 4 Fantásticos. Marca lo que ya viste y sigue tu aventura.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="hero-panel hero-panel-spider"><img src="./art-spider.webp" alt=""></div><div class="hero-panel hero-panel-xmen"><img src="./art-xmen.webp" alt=""></div><div class="burst"><span>¡A<br>VER!</span></div></div>
+        <div class="hero-ribbon">ORDEN DE ESTRENO · FASES DEL UCM</div>
+      </section>
+
+      <section class="dashboard" aria-label="Tu progreso">
+        <div class="progress-panel">
+          <div class="panel-kicker">TU AVANCE</div>
+          <div class="progress-number"><span id="done-count">0</span><span class="progress-slash">/</span><span id="total-count">0</span></div>
+          <progress id="overall-progress" max="100" value="0" aria-label="Progreso total"></progress>
+          <p id="progress-message">Cada gran saga empieza por una película.</p>
+        </div>
+        <div class="mission-panel">
+          <span class="mission-pin" aria-hidden="true">✦</span>
+          <div class="panel-kicker">ARCHIVO DE HÉROES</div>
+          <strong>Tu próxima aventura te espera.</strong>
+          <span id="remaining-count">0 títulos pendientes</span>
+        </div>
+      </section>
+
+      <section class="comic-gallery" aria-labelledby="comic-gallery-title">
+        <div class="gallery-heading"><div class="panel-kicker">ARTE ORIGINAL</div><h2 id="comic-gallery-title">VIÑETAS DEL MULTIVERSO</h2><p>Fragmentos de avances de cómics publicados por Marvel.</p></div>
+        <div class="gallery-grid">
+          <a class="comic-card" href="https://www.marvel.com/articles/comics/avengers-unlimited-63-captain-america-moon-knight-story-arc-preview" target="_blank" rel="noopener noreferrer"><img src="./art-avengers.webp" alt="Viñeta de Captain America en Avengers Unlimited #63" loading="lazy"><span class="comic-caption"><strong>AVENGERS</strong><small>Avengers Unlimited #63 · Caio Majado</small></span></a>
+          <a class="comic-card" href="https://www.marvel.com/articles/comics/ultimate-x-men-2-first-look-preview-maystorm" target="_blank" rel="noopener noreferrer"><img src="./art-xmen.webp" alt="Viñeta de Ultimate X-Men #2" loading="lazy"><span class="comic-caption"><strong>X-MEN</strong><small>Ultimate X-Men #2 · Peach Momoko</small></span></a>
+          <a class="comic-card" href="https://www.marvel.com/articles/comics/spider-boy-1-solo-series-first-look-preview-variant-covers" target="_blank" rel="noopener noreferrer"><img src="./art-spider.webp" alt="Viñeta de Spider-Man y Spider-Boy" loading="lazy"><span class="comic-caption"><strong>SPIDER-MAN</strong><small>Spider-Boy #1 · Paco Medina</small></span></a>
+          <a class="comic-card" href="https://www.marvel.com/articles/comics/first-look-at-new-fantastic-four-series-by-ryan-north-and-iban-coello" target="_blank" rel="noopener noreferrer"><img src="./art-fantastic-four.webp" alt="Viñeta de The Thing en Fantastic Four #1" loading="lazy"><span class="comic-caption"><strong>4 FANTÁSTICOS</strong><small>Fantastic Four #1 · Iban Coello</small></span></a>
+        </div>
+        <p class="art-credit">Imágenes © Marvel. Toca una viñeta para ver el avance y los créditos completos en Marvel.com.</p>
+      </section>
+
+      <section class="doomsday" id="doomsday" aria-labelledby="doomsday-title">
+        <div class="doom-intro">
+          <div class="doom-copy">
+            <span class="doom-kicker">LA CUENTA REGRESIVA COMIENZA</span>
+            <h2 id="doomsday-title">CAMINO A<br><span>DOOMSDAY</span></h2>
+            <p>La selección de películas y series que Disney+ publicó para prepararse para <em>Avengers: Doomsday</em>. Marca cada título y sigue tu avance.</p>
+            <div class="doom-countdown" aria-label="Cuenta regresiva para Avengers: Doomsday">
+              <div><span class="doom-countdown-kicker" id="doom-countdown-label">DÍAS PARA EL ESTRENO</span><div class="doom-countdown-number"><strong id="doom-days">—</strong><span id="doom-days-unit">días</span></div></div>
+              <time datetime="2026-12-18">18 DIC 2026</time>
+            </div>
+            <div class="doom-progress-wrap"><strong><span id="doom-done">0</span> / <span id="doom-total">13</span></strong><progress id="doom-progress" max="13" value="0" aria-label="Progreso hacia Doomsday"></progress></div>
+            <a class="doom-source" href="https://www.disneyplus.com/explore/articles/countdown-to-avengers-doomsday" target="_blank" rel="noopener noreferrer">Ver la guía oficial de Disney+ ↗</a>
+          </div>
+          <div class="doom-intro-art"><img src="./doom-portrait.jpg" alt="Doctor Doom en Avengers: Doomsday"><span>DOOM<br>IS COMING</span></div>
+        </div>
+        <div class="doom-gallery" aria-label="Doctor Doom en el cine y los cómics">
+          <a href="https://movies.disney.com/avengers-doomsday" target="_blank" rel="noopener noreferrer"><img src="./doom-scene.jpg" alt="Doctor Doom detiene una descarga de energía en Avengers: Doomsday" loading="lazy"><span>CINE · Avengers: Doomsday © Marvel</span></a>
+          <a href="https://cdn.marvel.com/content/2x/doomquest2026001_cover.jpg" target="_blank" rel="noopener noreferrer"><img src="./doom-comic-cover.jpg" alt="Portada del cómic Doomquest número 1 con Doctor Doom" loading="lazy"><span>CÓMIC · Doomquest #1 · Alex Ross © Marvel</span></a>
+          <a href="https://cdn.marvel.com/content/2x/newavn2013023.webp" target="_blank" rel="noopener noreferrer"><img src="./doom-comic-panel.webp" alt="Viñeta de New Avengers número 23 con Doctor Doom y Valeria Richards" loading="lazy"><span>VIÑETA · New Avengers #23 © Marvel</span></a>
+        </div>
+        <div class="doom-list-heading"><div><span class="doom-mini">13 TÍTULOS · GUÍA OFICIAL</span><h3>EL PLAN DE VICTOR</h3></div><span id="doom-remaining">13 por ver</span></div>
+        <div id="doom-groups" class="doom-groups"></div>
+        <p class="doom-note">La guía de Disney+ incluye <em>Loki</em> como una serie; aquí se marcan sus dos temporadas juntas. Tus checks se sincronizan con la lista principal.</p>
+      </section>
+
+      <section class="collection" aria-labelledby="collection-title">
+        <div class="section-heading"><div><div class="panel-kicker">EL ARCHIVO</div><h2 id="collection-title">ELIGE TU SAGA</h2></div><span class="section-stamp">CHECKLIST</span></div>
+        <div class="category-tabs" id="category-tabs" aria-label="Filtrar por saga"></div>
+        <div class="tools-row">
+          <label class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><span class="sr-only">Buscar título</span><input id="search" type="search" placeholder="Busca una película o serie..." autocomplete="off"></label>
+          <button class="pending-button" id="pending-button" type="button" aria-pressed="false">Solo pendientes</button>
+        </div>
+        <div class="list-heading"><span id="visible-count">Cargando lista...</span><span class="legend"><i class="legend-film" aria-hidden="true"></i> Película <i class="legend-series" aria-hidden="true"></i> Serie / especial</span></div>
+        <div id="groups" class="groups" aria-live="polite"></div>
+        <p id="empty-state" class="empty-state" hidden>Sin resultados. Prueba con otro título o saga.</p>
+      </section>
+
+      <section class="save-panel" aria-labelledby="save-title">
+        <div><div class="panel-kicker">TU PROGRESO</div><h2 id="save-title">GUARDA TU MISIÓN</h2><p>Los checks se guardan automáticamente en este navegador. Puedes llevar una copia a otro dispositivo.</p></div>
+        <div class="save-actions"><a class="download-button" id="offline-download" href="./marvel-watchlist-offline.zip" download>Descargar app (.zip)</a><button id="export-button" type="button">Exportar progreso</button><button class="import-button" id="import-button" type="button">Importar progreso</button><input id="import-input" type="file" accept="application/json,.json" hidden></div>
+      </section>
+    </main>
+
+    <footer>HECHO PARA UNA MARATÓN ÉPICA <span aria-hidden="true">★</span> MARVEL WATCHLIST</footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="install-dialog"><div class="dialog-art" aria-hidden="true">★</div><h2>INSTALA TU APP</h2><p>Abre esta página en Safari o Chrome y elige <strong>“Agregar a pantalla de inicio”</strong> o <strong>“Instalar aplicación”</strong> desde el menú del navegador.</p><button id="close-dialog" type="button">Entendido</button></dialog>
+  <noscript><p>Activa JavaScript para usar el checklist.</p></noscript>
+</body>
+</html>
